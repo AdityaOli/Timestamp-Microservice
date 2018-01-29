@@ -18,13 +18,13 @@ app.get('/:query', function(request, response)
         if (+date >= 0) 
         {
             unix = +date;
-            natural = unixToNat(unix);
+            natural = unixToNatural(unix);
         } 
         
         if (isNaN(+date) && moment(date, "MMMM D, YYYY").isValid()) 
         {
-            unix = +natToUnix(date);
-            natural = unixToNat(unix);
+            unix = +naturalToUnix(date);
+            natural = unixToNatural(unix);
         }
         
         var dateObj = { "unix": unix, "natural": natural };
@@ -32,12 +32,12 @@ app.get('/:query', function(request, response)
         
 });
     
-function natToUnix(date) 
+function naturalToUnix(date) 
 {
     return moment(date, "MMMM D, YYYY").format("X");
 }
    
-function unixToNat(unix) 
+function unixToNatural(unix) 
 {
     return moment.unix(unix).format("MMMM D, YYYY");
 }
