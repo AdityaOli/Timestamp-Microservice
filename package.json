@@ -1,17 +1,19 @@
 {
 	"name": "fcc-learn-npm-package-json",
 	"dependencies": {
-		"express": "^4.14.0"
+		"express": "latest",
+    "moment": "latest"
 	},
 	"main": "server.js",
 	"scripts": {
 		"start": "node server.js"
 	},
 	"engines": {
-		"node": "4.4.5"
+		"node": "8.9.4"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://idontknow/todo.git"
-	}
+		"url": "https://github.com/AdityaOli/Timestamp-Microservice.git"
+	},
+  "description": "This displays the timestamp amazingly"
 }
